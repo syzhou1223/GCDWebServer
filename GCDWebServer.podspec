@@ -22,8 +22,8 @@ Pod::Spec.new do |s|
   s.default_subspec = 'Core'
   
   s.subspec 'Core' do |cs|
-    cs.source_files = 'GCDWebServer/**/*.{h,m}'
-    cs.private_header_files = "GCDWebServer/Core/GCDWebServerPrivate.h"
+    cs.source_files = 'GCDWebServer_new/**/*.{h,m}'
+    cs.private_header_files = "GCDWebServer_new/Core/GCDWebServerPrivate.h"
     cs.requires_arc = true
     cs.ios.library = 'z'
     cs.ios.frameworks = 'CoreServices', 'CFNetwork'
@@ -34,7 +34,7 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'WebDAV' do |cs|
-    cs.dependency 'GCDWebServer/Core'
+    cs.dependency 'GCDWebServer_new/Core'
     cs.source_files = 'GCDWebDAVServer/*.{h,m}'
     cs.requires_arc = true
     cs.ios.library = 'xml2'
@@ -44,7 +44,7 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'WebUploader' do |cs|
-    cs.dependency 'GCDWebServer/Core'
+    cs.dependency 'GCDWebServer_new/Core'
     cs.source_files = 'GCDWebUploader/*.{h,m}'
     cs.requires_arc = true
     cs.resource = "GCDWebUploader/GCDWebUploader.bundle"
